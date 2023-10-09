@@ -13,3 +13,7 @@ Datos personales:
 Temática:
 
     Nuestro trabajo trata sobre una pagina de venta de insumos para impresoras 3D y venta de impresiones 3D.
+
+Descripción:
+
+    Esta es una pagina para compra de impresiones 3D, el cliente puede elegir los productos que desea, elegir el color y la cantidad.
