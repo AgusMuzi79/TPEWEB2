@@ -1,0 +1,20 @@
+<label>Buscar por categoria</label>
+<?php foreach($tipos as $tipo) : ?>
+    <a href="pruductos/<?=$tipo->tipo?>"><?=$tipo->tipo?></a>
+<?php endforeach;?>
+<table>
+    <thead>
+        <tr>
+            <td>Producto:</td>
+            <td>Categoria:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($productos as $producto) : ?>
+            <tr>
+                <td><?=$producto->nombre?></td>
+                <td><?=$producto->tipo?></td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
