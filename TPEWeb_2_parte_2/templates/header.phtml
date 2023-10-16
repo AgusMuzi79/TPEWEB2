@@ -12,10 +12,15 @@
         <h1>NoisyPrints</h1>
         <nav>
             <ul>
-                <li><a href="login">Acceso</a></li>
+                <li><a href="access/login">Acceso</a></li>
                 <li><a href="productos">Productos</a></li>
-                <li><a href="lista">Mi Lista</a></li>
+                <?php if (!empty($_SESSION)): ?>
+                    <li><a href="lista">Mi Lista</a></li>
+                <?php endif; ?>
             </ul>
+            <?php if (!empty($_SESSION)): ?>
+            <a href="access/logout">Logout</a>
+            <?php endif; ?>
         </nav>
     </header>
     <main>

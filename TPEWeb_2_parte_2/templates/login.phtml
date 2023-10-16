@@ -1,13 +1,11 @@
-<form action="auth" method="POST">
+<form action="access/verify" method="POST">
 
     <label for="email">Email</label>
-    <input type="text" name="nombre" required>
+    <input type="email" id="email" name="email" required>
 
-    <label for="contrasena">Contraseña:</label>
-    <input type="password" name="contrasena" required>
+    <label for="contrasenia">Contraseña:</label>
+    <input type="password" id="contrasenia" name="contrasenia" required>
 
     <input type="submit" value="Iniciar sesion">
 
 </form>
-<p>No tenes una cuenta?</p>
-<a href="register">Registrarse</a>

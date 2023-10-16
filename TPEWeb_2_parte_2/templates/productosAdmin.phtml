@@ -1,0 +1,37 @@
+<h2>Administrador de categorias</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Categoria:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($categorias as $categoria) : ?>
+            <tr>
+                <td><?=$categoria->nombre?></td>
+                <td><a href="productos/eliminar/<?=$categoria->nombre?>">Eliminar</a></td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
+
+<div>
+    <form action="productos/crear" method="POST">
+        <label>Crear una categoria</label>
+        <input name="categoria" type="text" require>
+        <input type="submit" value="Crear">
+    </form>
+</div>
+
+<div>
+    <form action="productos/editar" method="POST">
+        <label>Editar una categoria</label>
+        <select name="categoria" id="categoria">
+            <?php foreach($categorias as $categoria) : ?>
+                <option name="<?=$categoria->nombre?>"><?=$categoria->nombre?></option>
+            <?php endforeach;?>
+        </select>
+        <input name="categoriaNueva" type="text">
+        <input type="submit" value="Editar">
+    </form>
+</div>
