@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Producto:</td>
+            <td>Puntaje:</td>
+            <td>Categoria:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($lista as $listaItem) : ?>
+            <tr>
+                <td><?=$listaItem->nombre_producto?></td>
+                <td><?=$listaItem->puntaje?></td>
+                <td><?=$listaItem->categoria_producto?></td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <base href="<?php echo BASE_URL ?>" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoisyPrints</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center">NoisyPrints</h1>
+        <nav>
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="access/login">Acceso</a></li>
+                <li class="nav-item"><a class="nav-link" href="productos">Productos</a></li>
+                <?php if (!empty($_SESSION)): ?>
+                    <li class="nav-item"><a class="nav-link" href="lista">Mi Lista</a></li>
+                <?php endif; ?>
+                <?php if (!empty($_SESSION)): ?>
+                <li class="nav-item"><a  class="nav-link" href="access/logout">Logout</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+    <main>
