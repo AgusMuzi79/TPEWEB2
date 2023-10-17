@@ -1,0 +1,27 @@
+<h2>Filtrar: </h2>
+<form action="submit">
+    <select onchange="submit" class="form-select">
+        <option selected><a href="productos">Todos</a></option>
+        <?php foreach($categorias as $categoria) : ?>
+            <option value="categorias"><a href="productos/categoria/<?=$categoria->nombre?>"><?=$categoria->nombre?></a></option>
+        <?php endforeach;?>
+    </select>
+</form>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Producto:</td>
+            <td>Categoria:</td>
+            <td>Detalle</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($productos as $producto) : ?>
+            <tr>
+                <td><?=$producto->nombre?></td>
+                <td><?=$producto->nombre_categoria?></td>
+                <td><a href="productos/detalle/<?=$producto->nombre?>">Ver mas</a></td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+<h2>Administrador de categorias</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Categoria:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($categorias as $categoria): ?>
+            <tr>
+                <td><?= $categoria->nombre ?></td>
+                <td><a class="btn btn-primary btn-sm" href="productos/eliminar/<?= $categoria->nombre ?>">Eliminar</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<form action="productos/crear" method="POST">
+    <div class="input-group mb-3">  
+        <span class="input-group-text">Crear categoria</span>
+        <div class="form-floating">
+            <input name="categoria" type="text" class="form-control" id="floatingInputGroup1" placeholder="categoria"
+                require>
+        </div><input class="input-group-text" type="submit" value="Crear">
+    </div>
+</form>
+
+<form action="productos/editar" method="POST">
+    <div class="input-group mb-3">
+        <span class="input-group-text ">Editar categoria</span>
+        <select name="categoria" class="form-select">
+            <?php foreach ($categorias as $categoria): ?>
+                <option name="<?= $categoria->nombre ?>"><?= $categoria->nombre ?></option>
+            <?php endforeach; ?>
+        </select>
+        <div class="form-floating">
+            <input name="categoriaNueva" type="text" class="form-control" id="floatingInputGroup1" placeholder="categoriaNueva"
+                require>
+        </div><input class="input-group-text" type="submit" value="Editar">
+    </div>
+</form>
